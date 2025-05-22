@@ -6,12 +6,23 @@ from sqlalchemy.orm import Session
 import crud, models, schemas
 from database import SessionLocal, engine
 
+# Depends: Una función de FastAPI que se utiliza para la inyección de dependencias. 
+# Es un patrón poderoso que permite a FastAPI manejar la creación y cierre de recursos 
+# (como las sesiones de base de datos) y pasar estos recursos a tus funciones de path operation.
+
+
 # Create tables in DB
+# contiene todas las definiciones de tablas que has creado.
 models.Base.metadata.create_all(bind=engine)
+# create_all(bind=engine): Le dice a SQLAlchemy que "cree todas las tablas" definidas 
+# en models.Base.metadata en la base de datos a la que está conectado el engine.
+# Propósito: Esta línea se ejecuta al iniciar la aplicación para asegurar que todas las 
+# tablas necesarias existen en la base de datos. Si las tablas ya existen, SQLAlchemy no las recreará.
 
 app = FastAPI()
 
 # Dependencies to create a DB session - OJO: move to deps.py
+# Función generadora que proporciona una sesión de base de datos.
 def get_db():
   db = SessionLocal()
   try:

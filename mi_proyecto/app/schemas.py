@@ -1,6 +1,9 @@
 #
 # schemas.py : Pydantic models to data validation 18:06
 #
+# Contiene los modelos Pydantic que usamos para la validación y serialización de datos de 
+# entrada/salida de la API.
+#
 from pydantic import BaseModel, EmailStr
 from typing import List, Optional
 from datetime import datetime

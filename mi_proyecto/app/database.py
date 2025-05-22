@@ -9,6 +9,7 @@ from sqlalchemy.orm import sessionmaker
 SQLALCHEMY_DATABASE_URL = "sqlite:///./sql_app.db"
 
 # Para PostgreSQL seria algo como:
+# Ocultar en .env
 # SQLALCHEMY_DATABASE_URL = "postgresql://usuario:contrasena@localhost/nombre_db"
 
 # Crear el motor de SQLAlchemy

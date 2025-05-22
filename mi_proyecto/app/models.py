@@ -1,5 +1,9 @@
 #
 # models.py : SQLAlchemy DB models
+# 
+# Contiene definiciones de las tablas de la BD como clases de Python (los modelos ORM de SQLAlchemy).
+# Por ejemplo, models.User y models.Item serían las representaciones Python de tus tablas de usuarios 
+# y ítems en la base de datos.
 #
 # Import type of fields in DB tables
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, Text, DateTime
