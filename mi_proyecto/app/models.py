@@ -1,5 +1,5 @@
 #
-# SQLAlchemy DB models
+# models.py : SQLAlchemy DB models
 #
 # Import type of fields in DB tables
 from sqlalchemy import Boolean, Column, ForeignKey, Integer, String, Text, DateTime

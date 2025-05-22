@@ -1,5 +1,5 @@
 #
-# Setup DB connection
+# database.py : Setup DB connection
 #
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
@@ -17,7 +17,7 @@ engine = create_engine(
 )
 
 # Crear sesion local para interactuar con la BD
-SessionLoca1 = sessionmaker(autocommit=False, autoflush=False, bind=engine)
+SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 
 # Crear una clase Base que sera la base para nuestros modelos
 Base = declarative_base()
