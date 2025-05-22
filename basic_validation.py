@@ -14,3 +14,4 @@ class Producto (BaseModel):
 @app.post("/productos/")
 async def crear_producto(producto : Producto):
   return {"mensaje" : "Producto creado", "producto" : producto}
+
